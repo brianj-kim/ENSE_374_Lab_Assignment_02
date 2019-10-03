@@ -39,6 +39,14 @@ public class LinkedList {
             this.next = le;
         }
 
+        public ListElement getPrev(){
+            return this.next;
+        }
+
+        public void setPrev(ListElement le){
+            this.next = le;
+        }
+
     }
 
     public static LinkedList addElement(LinkedList list, int data){
