@@ -72,7 +72,7 @@ public class LinkedList {
 
     }
 
-    public static LinkedList getElement(LinedList list, int index){
+    public static LinkedList getElement(LinkedList list, int index){
         assert(list.head == null) : "the list is empty.";
         assert(index == 0) : "index must be greater than 0.";
 
@@ -92,7 +92,7 @@ public class LinkedList {
 
     }
 
-    public static LinkedList deleteElement(int index){
+    public static LinkedList deleteElement(LinkedList list, int index){
         assert(list.head == null) : "the list is empty.";
         assert(index == 0) : "index must be greater than 0.";
 
@@ -145,6 +145,20 @@ public class LinkedList {
 
         System.out.println(" \n ");
     }
+
+    public static boid printLinkedListHead(LinkedList list){
+        ListElement prev = list.head;
+
+        System.out.println("The list(backward) : ");
+
+        while(prev.getPrev() != list.head.getNext()){
+            System.out.println(prev.getData() + " ");
+
+            prev = current.getPrev();
+        }
+
+        System.out.println(" \n ");
+    }
         
 }
 
@@ -168,22 +182,14 @@ public static void main(String[] args) {
     list = addElement(list, 10);
     
 
-    printList(list); 
+    printLinkedListHead(list); 
   
-    // 
-    // ******DELETION BY KEY****** 
-    // 
 
-    // Delete node with value 1 
-    // In this case the key is ***at head*** 
-    deleteByKey(list, 1); 
+    deleteElement(list, 1); 
 
-    // Print the LinkedList 
-    printList(list); 
 
-    // Delete node with value 4 
-    // In this case the key is present ***in the middle*** 
-    deleteByKey(list, 4); 
+    printLinkedListHead(list); 
+
 
     // Print the LinkedList 
     printList(list); 
