@@ -168,7 +168,7 @@ public static void main(String[] args) {
     ListElement le = new ListElement();
     le.setData(5);
 
-    System.out.println("le has data of " + le.getData + " \n \n \n")
+    System.out.println("le has data of " + le.getData + " \n \n \n");
            
     LinkedList list = new LinkedList();     
 
@@ -190,7 +190,5 @@ public static void main(String[] args) {
 
     printLinkedListHead(list); 
 
-
-    // Print the LinkedList 
-    printList(list); 
+    printLinkedListTail(list);
 }
